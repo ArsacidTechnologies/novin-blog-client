@@ -1,0 +1,1 @@
+export type SelectArrayType = { label: string, value: string }[];
