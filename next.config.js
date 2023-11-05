@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // turbo: {
+  //   loaders: {
+  //     '.scss': ['sass-loader']
+  //   }
+  // }
 
   // i18n: {
   //   // These are all the locales you want to support in

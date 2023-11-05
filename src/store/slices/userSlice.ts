@@ -5,13 +5,15 @@ import type { AppState, AppThunk } from '../store';
 export interface UserState {
   role: userRole;
   phone: string;
+  loginOrSignUp: loginOrSignUpType
 }
 export type userRole = 'choosing' | 'client' | 'approver' | 'subscriber'
-
+export type loginOrSignUpType = 'login' | 'signup'
 
 const initialState: UserState = {
   role: 'choosing',
-  phone: ''
+  phone: '',
+  loginOrSignUp: 'login'
 }
 
 
@@ -64,6 +66,10 @@ export const userSlice = createSlice({
     setUserPhone: (state, action: PayloadAction<string>) => {
       state.phone = action.payload;
     },
+    setUserLoginOrSignUp: (state, action: PayloadAction<loginOrSignUpType>) => {
+      state.loginOrSignUp = action.payload;
+    },
+
 
   },
   extraReducers: (builder) => { },
@@ -71,10 +77,12 @@ export const userSlice = createSlice({
 
 export const {
   setUserRole,
-  setUserPhone
+  setUserPhone,
+  setUserLoginOrSignUp
 } = userSlice.actions;
 export const selectUserRole = (state: AppState) => state.user.role;
 export const selectUserPhone = (state: AppState) => state.user.phone;
+export const selectUserLoginOption = (state: AppState) => state.user.loginOrSignUp;
 
 
 export default userSlice.reducer;

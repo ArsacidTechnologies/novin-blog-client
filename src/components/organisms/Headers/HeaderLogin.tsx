@@ -24,11 +24,11 @@ const HeaderLogin: FC<IHeaderLoginProps> = ({ title }) => {
   return (
     <header className="py-6 ">
       <nav className='container flex items-center justify-between bg-transparent'>
-        <ul>
+        {/* <ul>
           <li>
             <Link href='/'>Login</Link>
           </li>
-        </ul>
+        </ul> */}
         <ul className=''>
           <LogoImage classes="w-fit h-fit object-fit" w={100} h={60} />
         </ul>

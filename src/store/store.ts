@@ -1,6 +1,7 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 
 import userReducer from "./slices/userSlice";
+import settingReducer from "./slices/settingSlice";
 
 
 
@@ -8,6 +9,7 @@ export function makeStore() {
   return configureStore({
     reducer: {
       user: userReducer,
+      setting: settingReducer
     },
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware({

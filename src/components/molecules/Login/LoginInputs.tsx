@@ -10,8 +10,8 @@ export interface ILoginHeroProps {
 const LoginInputs: FC<ILoginHeroProps> = ({ elementId, label, placeHolder, type }) => {
 
   return (
-    <div className='font-Vazir justify-start'>
-      <label className='flex m-1' htmlFor={elementId}>{label}</label>
+    <div className='font-Vazir justify-start my-2'>
+      {/* <label className='flex m-1' htmlFor={elementId}>{label}</label> */}
       <Input
         id={elementId}
         label={label}

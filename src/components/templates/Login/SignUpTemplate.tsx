@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import TypoGraphy from '../../molecules/ImageComponents/TypoGraphy/TailwindTypo';
+import SignUpForm from '../../organisms/Forms/SignUpForm';
 
 export interface ISignUpProps {
 
@@ -7,8 +7,8 @@ export interface ISignUpProps {
 
 const SignUpTemplate: FC<ISignUpProps> = ({ }) => {
   return (
-    <div>
-      <TypoGraphy text='SignUp' />
+    <div className='mx-auto flex w-full max-w-sm flex-col gap-6 font-Vazir'>
+      <SignUpForm />
     </div>
   )
 }

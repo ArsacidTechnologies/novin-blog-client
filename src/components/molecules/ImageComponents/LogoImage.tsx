@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import img from '/public/logo-main.png'
+import img from '@/public/logo-main.png'
 
 type Props = {
   classes: string,
@@ -16,7 +16,7 @@ const LogoImage = (props: Props) => {
       <Image
         width={props.w}
         height={props.h}
-        objectFit="fit"
+        // objectFit="fit"
         src={img}
         alt={props.Alt ?? "logo"}
         className={props.classes}

@@ -1,6 +1,5 @@
 import type { Config } from 'tailwindcss'
 import { nextui } from '@nextui-org/react'
-
 const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -10,6 +9,15 @@ const config: Config = {
   ],
   darkMode: 'class',
   theme: {
+    extend: {
+      fontFamily: {
+        Vazir: ["Vazir"],
+        "Vazir-Bold": ["Vazir-Bold"],
+        "Vazir-Light": ["Vazir-Light"],
+        "Vazir-Medium": ["Vazir-Medium"],
+        "Vazir-Thin": ["Vazir-Thin"],
+      },
+    },
     container: {
       center: true,
       padding: {
@@ -20,15 +28,23 @@ const config: Config = {
     }
   },
   plugins: [
+    require('rippleui'),
     nextui({
+
       themes: {
         light: {
           layout: {}, // light theme layout tokens
-          colors: {} // light theme colors
+          colors: {
+            background: '#ffffff',
+            foreground: '#0D001A',
+          } // light theme colors
         },
         dark: {
           layout: {}, // dark theme layout tokens
-          colors: {} // dark theme colors
+          colors: {
+            background: '#000000',
+            foreground: '#ffffff',
+          } // dark theme colors
         },
         modern: {
           extend: 'dark', // <- inherit default values from dark theme
