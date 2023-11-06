@@ -18,6 +18,7 @@ const LoginForm: React.FC = () => {
       <LoginHero />
       <RoleSelector array={userRolesArray} label='انتخاب نقش کاربر' />
       <LoginButtonAction
+        label='وارد شوید'
         onClick={() => {
           router.push('./posts')
         }}

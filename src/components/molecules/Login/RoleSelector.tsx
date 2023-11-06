@@ -13,14 +13,14 @@ const RoleSelector: FC<IRoleSelectorProps> = ({ array, label }) => {
   const dispatch = useAppDispatch()
 
   return (
-    <div className="form-field font-Vazir">
+    <div className="form-field font-Vazir ">
       <label className="form-label text-base font-Vazir text-content1">{label}</label>
       <select
         onChange={(e) => {
           console.log('hi clicked')
           dispatch(setUserRole((e.target.value as userRoleType)))
         }}
-        className="select select-lg">
+        className="select select-lg rounded-medium">
         {array.map((role, index) =>
           <option value={role.value} key={index}>{role.label}</option>
         )}

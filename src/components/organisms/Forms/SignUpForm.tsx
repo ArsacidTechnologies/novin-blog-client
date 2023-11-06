@@ -15,7 +15,7 @@ const SignUpForm: React.FC = () => {
       <FormInput label="نام خانوادگی" placeholder="نام خانوادگی خود را وارد کنید" type="password" />
       <FormInput label="پست الکترونیک - اختیاری" placeholder="YourEmail@gmail.com" type="email" />
       <LoginHero />
-      <LoginButtonAction />
+      <LoginButtonAction label='ثبت نام کنید' />
       <ChangeLoginSignUp />
     </div>
   );

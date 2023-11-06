@@ -18,16 +18,9 @@ const SignOrLoginTemplate: FC<ISignOrLoginProps> = ({ }) => {
   const renderComponent = () => {
     switch (selecSignInOrSignUp) {
       case 'login':
-        return <>
-          <LoginTemplate />
-          {/* <Button onClick={() => setOption("signup")} color='secondary'>Sign Up</Button> */}
-        </>
-          ;
+        return <LoginTemplate />;
       case 'signup':
-        return <>
-          <SignUpTemplate />
-          {/* <Button onClick={() => setOption("login")} color='secondary'>Login</Button> */}</>
-          ;
+        return <SignUpTemplate />;
 
     }
   };

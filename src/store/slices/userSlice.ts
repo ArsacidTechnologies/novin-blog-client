@@ -11,7 +11,7 @@ export type userRoleType = 'choosing' | 'client' | 'approver' | 'subscriber'
 export type loginOrSignUpType = 'login' | 'signup'
 
 const initialState: UserState = {
-  role: 'client',
+  role: 'choosing',
   phone: '',
   loginOrSignUp: 'login'
 }
