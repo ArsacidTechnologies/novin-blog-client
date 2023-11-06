@@ -25,7 +25,7 @@ export default function RootLayout({
 
 
   return (
-    <html dir='rtl' className=' flex flex-wrap justify-center items-center border font-Vazir' lang="fa">
+    <html dir='rtl' className=' flex flex-wrap justify-center items-center font-Vazir' lang="fa">
       <body className={inter.className}>
         <Providers>
           <div className='h-screen justify-center items-center'>

@@ -30,7 +30,6 @@ const config: Config = {
   plugins: [
     require('rippleui'),
     nextui({
-
       themes: {
         light: {
           layout: {}, // light theme layout tokens
@@ -51,6 +50,7 @@ const config: Config = {
           colors: {
             background: '#0D001A',
             foreground: '#ffffff',
+            content1: '#F182F6',
             primary: {
               50: '#3B096C',
               100: '#520F83',

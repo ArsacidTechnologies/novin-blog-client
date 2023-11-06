@@ -12,6 +12,8 @@ const LoginTemplate: React.FC = () => {
         <p className="text-sm">برای دسترسی به حساب خود وارد شوید</p>
       </div>
       <LoginForm />
+      <h1 className=' w-fit text-center absolute font-Vazir bottom-0 '>این صفحه جهت تست میباشد!</h1>
+
     </div>
   );
 }

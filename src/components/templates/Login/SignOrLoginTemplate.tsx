@@ -32,9 +32,8 @@ const SignOrLoginTemplate: FC<ISignOrLoginProps> = ({ }) => {
     }
   };
   return (
-    <div className='justify-center items-center' >
+    <div className='justify-center items-center my-4'>
       {renderComponent()}
-      <h1 className=' w-fit text-center absolute font-Vazir bottom-0 '>این صفحه جهت تست میباشد!</h1>
     </div>
   )
 }

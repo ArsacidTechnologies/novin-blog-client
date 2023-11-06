@@ -3,15 +3,15 @@ import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import type { AppState, AppThunk } from '../store';
 
 export interface UserState {
-  role: userRole;
+  role: userRoleType;
   phone: string;
   loginOrSignUp: loginOrSignUpType
 }
-export type userRole = 'choosing' | 'client' | 'approver' | 'subscriber'
+export type userRoleType = 'choosing' | 'client' | 'approver' | 'subscriber'
 export type loginOrSignUpType = 'login' | 'signup'
 
 const initialState: UserState = {
-  role: 'choosing',
+  role: 'client',
   phone: '',
   loginOrSignUp: 'login'
 }
@@ -60,7 +60,7 @@ export const userSlice = createSlice({
   initialState,
 
   reducers: {
-    setUserRole: (state, action: PayloadAction<userRole>) => {
+    setUserRole: (state, action: PayloadAction<userRoleType>) => {
       state.role = action.payload;
     },
     setUserPhone: (state, action: PayloadAction<string>) => {
