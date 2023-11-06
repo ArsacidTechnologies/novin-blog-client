@@ -10,6 +10,7 @@ export interface UserState {
 export type userRoleType = 'choosing' | 'client' | 'approver' | 'subscriber'
 export type loginOrSignUpType = 'login' | 'signup'
 
+
 const initialState: UserState = {
   role: 'choosing',
   phone: '',

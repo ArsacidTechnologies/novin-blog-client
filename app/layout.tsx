@@ -29,11 +29,11 @@ export default function RootLayout({
     <html dir='rtl' className=' flex flex-wrap justify-center items-center font-Vazir' lang="fa">
       <body className={inter.className}>
         <Providers>
-          <div className='h-screen justify-center items-center'>
+          <div className='w-screen h-screen justify-center items-center'>
             <HeaderLogin />
             <LoadingModal />
             <AuthCheck />
-            <main>{children}</main>
+            {children}
             <FooterLogin />
           </div>
         </Providers>

@@ -7,7 +7,6 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}'
   ],
-  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
@@ -27,21 +26,24 @@ const config: Config = {
       }
     }
   },
+  darkMode: 'class',
   plugins: [
     require('rippleui'),
     nextui({
+      // addCommonColors: true,
       themes: {
         light: {
           layout: {}, // light theme layout tokens
           colors: {
             background: '#ffffff',
             foreground: '#0D001A',
+
           } // light theme colors
         },
         dark: {
           layout: {}, // dark theme layout tokens
           colors: {
-            background: '#000000',
+            background: '#2B2B29',
             foreground: '#ffffff',
           } // dark theme colors
         },
