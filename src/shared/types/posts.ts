@@ -11,6 +11,8 @@ export interface IGetPosts {
 
 export interface Author {
   userId?: number;
+  firstName?: string;
+  familyName?: string;
   userName?: UserName;
   email?: Email;
   role?: number;

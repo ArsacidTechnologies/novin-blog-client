@@ -6,7 +6,6 @@ export interface IPostPageProps {
 
 }
 
-
 const PostPage: FC<IPostPageProps> = async ({ }) => {
   const data = await getPosts()
 

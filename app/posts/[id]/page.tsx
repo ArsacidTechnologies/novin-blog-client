@@ -1,31 +1,20 @@
-import { NextServer } from 'next/dist/server/next';
+import { getPostById } from '@/src/store/api/userApi';
+import { NextPageContext } from 'next';
 import React, { FC } from 'react'
 
 
-export interface IPostPage {
+// export interface IPostIdPage {
+//   params: NextPageContext
+// }
 
-}
+const PostIdPage: FC<NextPageContext> = async ({ AppTree }) => {
+  const data = await getPostById(1)
 
-const PostPage: FC<IPostPage> = ({ }) => {
   return (
     <div>
-      post page
+      {AppTree.defaultProps?.pageProps.slug}
     </div>
   )
 }
 
-export default PostPage;
-
-// You should use getServerSideProps when:
-// - Only if you need to pre-render a page whose data must be fetched at request time
-import { GetServerSideProps } from 'next'
-
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  // const { data } = await nop; // your fetch function here 
-
-  return {
-    props: {
-
-    }
-  }
-}
+export default PostIdPage;
