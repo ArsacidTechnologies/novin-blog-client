@@ -16,9 +16,10 @@ const LoadingModal: FC<ILoadingModalProps> = ({ }) => {
   useEffect(() => {
     dispatch(setIsLoading(false))
     return () => {
+      dispatch(setIsLoading(false))
 
     }
-  }, [dispatch]);
+  }, []);
 
   return (
     <div className={` top-0 right-0 max-h-screen h-full w-screen z-[1001] bg-background overflow-hidden ${isLoading ? 'fixed' : 'hidden'}`}>

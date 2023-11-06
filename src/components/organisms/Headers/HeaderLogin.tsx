@@ -30,7 +30,9 @@ const HeaderLogin: FC<IHeaderLoginProps> = ({ title }) => {
           </li>
         </ul> */}
         <ul className=''>
-          <LogoImage classes="w-fit h-fit object-fit" w={100} h={60} />
+          <Link href={'/'}>
+            <LogoImage classes="w-fit h-fit object-fit" w={100} h={60} />
+          </Link>
         </ul>
         <ul>
           <ThemeSwitcher />

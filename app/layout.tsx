@@ -6,6 +6,7 @@ import HeaderLogin from '@/src/components/organisms/Headers/HeaderLogin'
 import FooterLogin from '@/src/components/organisms/Footers/FooterLogin'
 import Providers from '@/app/providers'
 import LoadingModal from '@/src/components/organisms/Loader/LoadingModal'
+import AuthCheck from '@/src/components/molecules/AuthCheck'
 
 
 
@@ -31,6 +32,7 @@ export default function RootLayout({
           <div className='h-screen justify-center items-center'>
             <HeaderLogin />
             <LoadingModal />
+            <AuthCheck />
             <main>{children}</main>
             <FooterLogin />
           </div>
