@@ -27,7 +27,7 @@ export interface IHeaderLoginProps {
 const HeaderLogin: FC<IHeaderLoginProps> = ({ title }) => {
   const userRole = useAppSelector(selectUserRole)
   return (
-    <header className="py-6 ">
+    <header className="py-6 sticky top-0 backdrop-blur-sm">
       <nav className='container flex items-center justify-between bg-transparent'>
         <ul className=''>
           <Link href={'/'}>

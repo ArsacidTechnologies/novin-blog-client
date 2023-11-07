@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import FormInput from '@/src/components/molecules/FormInput';
 import { useAppDispatch, useAppSelector } from '@/src/store/hooks';
-import { selectUserRole, setUserLoginOrSignUp, userRolesArray } from '@/src/store/slices/userSlice';
+import { loginUser, selectUser, selectUserApiStatus, selectUserRole, setUserLoginOrSignUp, userRolesArray } from '@/src/store/slices/userSlice';
 import LoginHero from '../../molecules/Login/LoginHero';
 import LoginButtonAction from '../../molecules/ButtonAction.tsx/LoginButtonAction';
 import ChangeLoginSignUp from '../../molecules/ButtonAction.tsx/ChangeLoginSignUp';
@@ -9,8 +9,19 @@ import RoleSelector from '../../molecules/Login/RoleSelector';
 import { useRouter } from 'next/navigation';
 
 const LoginForm: React.FC = () => {
+  const dispatch = useAppDispatch()
   const userRole = useAppSelector(selectUserRole)
+  const userApiStatus = useAppSelector(selectUserApiStatus)
+  const user = useAppSelector(selectUser)
   const router = useRouter()
+
+  useEffect(() => {
+    if (user?.userId && userApiStatus === 'success' && user?.userId > 0) {
+      router.push('/posts')
+    }
+  }, [userApiStatus, user])
+
+
   return (
     <div className="form-group">
       <FormInput label="شماره همراه" placeholder="شماره موبایلی که با آن ثبت نام کرده اید" type="phone" />
@@ -20,7 +31,7 @@ const LoginForm: React.FC = () => {
       <LoginButtonAction
         label='وارد شوید'
         onClick={() => {
-          router.push('./posts')
+          dispatch(loginUser(userRole))
         }}
         disabled={(userRole === 'choosing')} />
       <ChangeLoginSignUp />

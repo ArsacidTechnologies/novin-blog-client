@@ -10,6 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
+        yekan: ['Yekan', 'sans'],
         Vazir: ["Vazir"],
         "Vazir-Bold": ["Vazir-Bold"],
         "Vazir-Light": ["Vazir-Light"],

@@ -34,7 +34,7 @@ export default function RootLayout({
             <LoadingModal />
             <AuthCheck />
             {children}
-            <FooterLogin />
+            {/* <FooterLogin /> */}
           </div>
         </Providers>
       </body>

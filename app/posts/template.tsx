@@ -1,5 +1,6 @@
 'use client'
 
+import FooterLogin from '@/src/components/organisms/Footers/FooterLogin'
 import Link from 'next/link'
 
 const CompanyLayout = ({ children }: { children: React.ReactNode }) => {

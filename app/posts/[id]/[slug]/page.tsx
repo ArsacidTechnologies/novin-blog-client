@@ -1,8 +1,7 @@
 import { IGetPosts } from '@/src/shared/types/posts';
 import { getPostById } from '@/src/store/api/userApi';
-import { Textarea } from '@nextui-org/react';
-import { NextPageContext } from 'next';
 import React, { FC } from 'react'
+import SinglePostPageTemplate from '@/src/components/templates/post/SinglePostPageTemplate';
 
 
 export interface IPostSlugPage {
@@ -17,9 +16,7 @@ const PostSlugPage: FC<IPostSlugPage> = async (props) => {
   const postData = await getPostById(Number(props.params.id))
   console.log(props)
   return (
-    <div>
-      <data></data>
-    </div >
+    <SinglePostPageTemplate post={postData} />
   )
 }
 

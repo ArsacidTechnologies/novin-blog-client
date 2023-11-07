@@ -13,6 +13,8 @@ const PostsLoading: FC<IPostsLoadingProps> = ({ }) => {
         <div className='table w-full justify-center'>
           <div className='table w-full justify-center'>
             <PostCardSkeleton />
+            <PostCardSkeleton />
+            <PostCardSkeleton />
           </div>
         </div>
       </div>
