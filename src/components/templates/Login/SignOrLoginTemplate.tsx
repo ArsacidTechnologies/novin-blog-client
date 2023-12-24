@@ -1,5 +1,5 @@
 "use client"
-import React, { FC, useState } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import LoginTemplate from './LoginTemplate';
 import SignUpTemplate from './SignUpTemplate';
 import TypoGraphy from '../../molecules/ImageComponents/TypoGraphy/TailwindTypo';
@@ -14,6 +14,13 @@ export interface ISignOrLoginProps {
 const SignOrLoginTemplate: FC<ISignOrLoginProps> = ({ }) => {
   // const [option, setOption] = useState<"login" | "signup">('login')
   const selecSignInOrSignUp = useAppSelector(selectUserLoginOption)
+  useEffect(() => {
+
+    return () => {
+
+    }
+  }, [])
+
 
   const renderComponent = () => {
     switch (selecSignInOrSignUp) {
