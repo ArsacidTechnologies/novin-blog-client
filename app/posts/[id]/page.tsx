@@ -3,16 +3,20 @@ import { NextPageContext } from 'next';
 import React, { FC } from 'react'
 
 
-// export interface IPostIdPage {
-//   params: NextPageContext
-// }
+export interface IPostIdPage {
+  params: {
+    id: string
+    slug: string
+  }
 
-const PostIdPage: FC<NextPageContext> = async ({ AppTree }) => {
+}
+
+const PostIdPage: FC<IPostIdPage> = async () => {
   const data = await getPostById(1)
 
   return (
     <div>
-      {AppTree.defaultProps?.pageProps.slug}
+      {data?.title}
     </div>
   )
 }
