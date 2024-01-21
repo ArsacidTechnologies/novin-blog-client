@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-export const dynamic = "force-dynamic"
+// export const dynamic = "force-dynamic"
 import PostTemplate from '@/src/components/templates/post/PostTemplate'
 import { getPosts } from "@/src/store/api/userApi";
 import PostCardSkeleton from '@/src/components/organisms/Post/PostCardSkeleton';

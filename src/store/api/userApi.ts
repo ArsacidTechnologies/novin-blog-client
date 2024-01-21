@@ -22,7 +22,7 @@ export const QueryUserByRoleItIsTemporary = async (role: number): Promise<User |
     return data;
   } catch (error) {
     console.error('Error:', error);
-    throw [];
+    return {};
   }
 };
 //--------------------------------------------------------------------------------//
@@ -32,7 +32,7 @@ export const getPosts = async (): Promise<IGetPosts[]> => {
     return data;
   } catch (error) {
     console.error('Error:', error);
-    throw [];
+    return [];
   }
 };
 //--------------------------------------------------------------------------------//
@@ -42,7 +42,8 @@ export const getPostById = async (id: number): Promise<IGetPosts> => {
     return data;
   } catch (error) {
     console.error('Error:', error);
-    throw [];
+    let response: IGetPosts = {}
+    return response;
   }
 };
 //--------------------------------------------------------------------------------//
@@ -52,7 +53,7 @@ export const getPostByIdWithComments = async (id: number): Promise<IGetPostWithC
     return data;
   } catch (error) {
     console.error('Error:', error);
-    throw [];
+    return {};
   }
 };
 //--------------------------------------------------------------------------------//

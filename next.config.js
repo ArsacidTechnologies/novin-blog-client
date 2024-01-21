@@ -15,6 +15,8 @@ const nextConfig = {
   //   defaultLocale: 'fa',
     
   // },
+  output: 'export',
+
 }
 
 module.exports = nextConfig
