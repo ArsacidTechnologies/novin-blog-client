@@ -10,7 +10,7 @@ import AuthCheck from '@/src/components/molecules/AuthCheck'
 
 
 
-const inter = Inter({ subsets: ['latin'] })
+// const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Novin IB Login',
@@ -26,15 +26,15 @@ export default function RootLayout({
 
 
   return (
-    <html dir='rtl' className=' flex flex-wrap justify-center items-center font-Vazir' lang="fa">
-      <body className={inter.className}>
+    <html dir='ltr' className=' flex flex-wrap justify-center items-center font-Vazir' lang="fa">
+      <body className={"font-Vazir"}>
         <Providers>
           <div className='w-screen h-screen justify-center items-center'>
             <HeaderLogin />
             <LoadingModal />
             <AuthCheck />
             {children}
-            <FooterLogin />
+            {/* <FooterLogin /> */}
           </div>
         </Providers>
       </body>

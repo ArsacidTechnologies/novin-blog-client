@@ -8,10 +8,11 @@ import React, { FC } from 'react'
 export interface IApproveUnitProps {
   postStatus?: PostStatus
   postId?: number
+  message?: string
   approveFunction?: () => {}
 }
 
-const ApproveUnit: FC<IApproveUnitProps> = ({ postStatus, postId, approveFunction }) => {
+const ApproveUnit: FC<IApproveUnitProps> = ({ postStatus, postId, approveFunction, message }) => {
   // const queryClient = useQueryClient()
   // const { data, status, isSuccess, error } = useQuery({ queryKey: ['posts'], queryFn: approveFunction })
   const userRole = useAppSelector(selectUserRole)
@@ -21,20 +22,17 @@ const ApproveUnit: FC<IApproveUnitProps> = ({ postStatus, postId, approveFunctio
 
   return (
     <>
-      {userRole === 'approver' && <div className='flex'>
+      {userRole === 'approver' && <div className='flex items-center'>
         <Button
           onClick={() => {
             handleApprove
           }}
-
           className="px-2 py-1 bg-gray-600 text-gray-100 font-bold rounded hover:bg-gray-500" >
           {status !== 'pending' ?
-            "تایید پست" :
+            message ?? "تایید کامنت" :
             <Spinner label="" color="default" labelColor="foreground" />}
-
         </Button>
-        {postStatus === 0 ? <span className="m-2  dot dot-error"></span> : <span className="m-2  dot dot-success"></span>}
-
+        {postStatus === 0 ? <span className="m-2  dot dot-error"></span> : <span className="m-2 dot dot-success"></span>}
       </div>}
     </>
   )

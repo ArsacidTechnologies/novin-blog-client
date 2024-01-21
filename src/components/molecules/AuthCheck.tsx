@@ -13,7 +13,7 @@ const AuthCheck: FC<IAuthCheckProps> = ({ }) => {
   const router = useRouter()
   useEffect(() => {
     if (userRole === 'choosing') {
-      router.push('/auth')
+      // router.push('/auth')
     }
 
     return () => {
