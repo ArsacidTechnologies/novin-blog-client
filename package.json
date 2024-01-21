@@ -10,7 +10,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "format": "prettier --write \"src/**/*.ts\" ",
-    "test": "echo \"Test OK"
+    "test": "echo \"Test OK\""
   },
   "dependencies": {
     "@material-ui/core": "^4.12.4",
